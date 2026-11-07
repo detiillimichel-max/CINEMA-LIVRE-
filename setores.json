@@ -1,0 +1,22 @@
+{
+  "min_downloads": 20,
+  "max_itens_padrao": 1500,
+  "tamanho_parte": 500,
+  "destaques_por_setor": 30,
+  "excluir": "collection:nsfw OR subject:(porn OR xxx OR erotic OR hentai)",
+  "setores": [
+    { "id": "filmes",        "titulo": "Filmes",                    "consulta": "collection:feature_films", "max_itens": 3000 },
+    { "id": "cinema-mudo",   "titulo": "Cinema mudo",               "consulta": "collection:silent_films" },
+    { "id": "terror-scifi",  "titulo": "Terror e ficção científica","consulta": "collection:SciFi_Horror" },
+    { "id": "film-noir",     "titulo": "Film noir e suspense",      "consulta": "subject:(\"film noir\" OR noir) AND collection:feature_films" },
+    { "id": "comedia",       "titulo": "Comédias",                  "consulta": "subject:comedy AND collection:feature_films" },
+    { "id": "western",       "titulo": "Faroeste",                  "consulta": "subject:western AND collection:feature_films" },
+    { "id": "desenhos",      "titulo": "Desenhos e animações",      "consulta": "collection:(animationandcartoons OR classic_cartoons)", "max_itens": 3000 },
+    { "id": "documentarios", "titulo": "Documentários",             "consulta": "subject:(documentary OR documentario OR documentário) OR collection:(documentaries OR documentary)", "max_itens": 3000 },
+    { "id": "ciencia-nasa",  "titulo": "Ciência e espaço (NASA)",   "consulta": "collection:nasa" },
+    { "id": "historia-guerra","titulo": "História e guerra",        "consulta": "subject:(\"world war\" OR wwii OR \"world war ii\" OR newsreel)" },
+    { "id": "educativos",    "titulo": "Filmes educativos e de época","consulta": "collection:prelinger", "max_itens": 3000 },
+    { "id": "tv-classica",   "titulo": "TV clássica",               "consulta": "collection:classic_tv" },
+    { "id": "portugues",     "titulo": "Em português",              "consulta": "language:(Portuguese OR por) AND collection:(feature_films OR animationandcartoons OR prelinger)" }
+  ]
+}

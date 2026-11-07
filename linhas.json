@@ -1,0 +1,61 @@
+{
+  "limite_padrao": 24,
+  "linhas": [
+    {
+      "id": "populares",
+      "titulo": "Populares no Internet Archive",
+      "fonte": "archive",
+      "consulta": "collection:feature_films",
+      "ordem": "downloads desc"
+    },
+    {
+      "id": "terror-scifi",
+      "titulo": "Terror e ficção científica clássicos",
+      "fonte": "archive",
+      "consulta": "collection:SciFi_Horror",
+      "ordem": "downloads desc"
+    },
+    {
+      "id": "cinema-mudo",
+      "titulo": "Cinema mudo",
+      "fonte": "archive",
+      "consulta": "collection:silent_films",
+      "ordem": "downloads desc"
+    },
+    {
+      "id": "portugues",
+      "titulo": "Em português",
+      "fonte": "archive",
+      "consulta": "collection:feature_films AND language:(Portuguese OR por)",
+      "ordem": "downloads desc"
+    },
+    {
+      "id": "anos-50",
+      "titulo": "Anos 1950",
+      "fonte": "archive",
+      "consulta": "collection:feature_films AND year:[1950 TO 1959]",
+      "ordem": "downloads desc"
+    },
+    {
+      "id": "documentarios",
+      "titulo": "Documentários",
+      "fonte": "archive",
+      "consulta": "(subject:documentary OR title:documentary) AND collection:(feature_films OR movies)",
+      "ordem": "downloads desc"
+    },
+    {
+      "id": "commons",
+      "titulo": "Wikimedia Commons: filmes livres",
+      "fonte": "commons",
+      "termo": "feature film",
+      "limite": 20
+    },
+    {
+      "id": "youtube-exemplo",
+      "titulo": "YouTube: filmes gratuitos (playlist)",
+      "fonte": "youtube",
+      "playlist": "COLOQUE_O_ID_DA_PLAYLIST_AQUI",
+      "ativo": false
+    }
+  ]
+}
