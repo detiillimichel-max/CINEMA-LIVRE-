@@ -20,7 +20,6 @@ on:
       - "setores.json"
       - "coletar_archive.py"
       - "atualizar.py"
-      - ".github/workflows/coletar.yml"
 
 permissions:
   contents: write
