@@ -32,7 +32,7 @@
   }
   async function parte(id, n) {
     const k = `${id}-${n}`;
-    if (!partes.has(k)) partes.set(k, (await getJson(`data/setores/${k}.json`)).map(norm));
+    if (!partes.has(k)) partes.set(k, (await getJson(`setores/${k}.json`)).map(norm));
     return partes.get(k);
   }
 
@@ -254,8 +254,8 @@
   // ---- início ----
   async function iniciar() {
     const [indice, filmes] = await Promise.all([
-      getJson("data/indice.json").catch(() => ({ setores: [] })),
-      getJson("data/filmes.json").catch(() => ({ linhas: [] }))
+      getJson("indice.json").catch(() => ({ setores: [] })),
+      getJson("filmes.json").catch(() => ({ linhas: [] }))
     ]);
 
     (filmes.linhas || []).forEach((l) => linhasHome.push({ titulo: l.titulo, itens: l.itens }));

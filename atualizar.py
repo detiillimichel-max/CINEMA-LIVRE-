@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Monta data/filmes.json a partir de fontes públicas.
+"""Monta filmes.json a partir de fontes públicas.
 
 Fontes:
   archive  - Internet Archive (advancedsearch, sem chave)
@@ -21,9 +21,9 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parent.parent
-CONFIG = RAIZ / "config" / "linhas.json"
-SAIDA = RAIZ / "data" / "filmes.json"
+RAIZ = Path(__file__).resolve().parent
+CONFIG = RAIZ / "linhas.json"
+SAIDA = RAIZ / "filmes.json"
 UA = "StreamingLivreBot/1.0 (catalogo pessoal; GitHub Actions)"
 
 

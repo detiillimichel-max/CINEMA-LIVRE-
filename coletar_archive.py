@@ -4,8 +4,8 @@
 Usa a API de varredura (services/search/v1/scrape), que pagina por cursor e
 aguenta dezenas de milhares de resultados. Saída:
 
-  data/indice.json                 -> setores, totais e destaques (leve)
-  data/setores/<setor>-<n>.json    -> itens do setor em partes (compactos)
+  indice.json                 -> setores, totais e destaques (leve)
+  setores/<setor>-<n>.json    -> itens do setor em partes (compactos)
 
 Variáveis de ambiente opcionais:
   MAX_ITENS_SETOR  sobrescreve o limite de itens por setor
@@ -24,11 +24,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from atualizar import http_json, limpar, ano_de, primeiro  # noqa: E402
 
-RAIZ = Path(__file__).resolve().parent.parent
-CONFIG = RAIZ / "config" / "setores.json"
-DADOS = RAIZ / "data"
-PASTA = DADOS / "setores"
-INDICE = DADOS / "indice.json"
+RAIZ = Path(__file__).resolve().parent
+CONFIG = RAIZ / "setores.json"
+DADOS = RAIZ
+PASTA = RAIZ / "setores"
+INDICE = RAIZ / "indice.json"
 URL = "https://archive.org/services/search/v1/scrape?"
 CAMPOS = "identifier,title,year,description,downloads,runtime"
 PAUSA = 1.0          # segundos entre páginas (gentil com o servidor)

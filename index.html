@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#141414">
+<title>Streaming Livre</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="logo">STREAMING<span>LIVRE</span></div>
+  <div class="busca">
+    <input id="busca" type="search" placeholder="Títulos, anos…" autocomplete="off" aria-label="Buscar">
+  </div>
+</header>
+
+<section class="hero" id="hero" hidden>
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-conteudo">
+    <h1 id="hero-titulo"></h1>
+    <p class="hero-meta" id="hero-meta"></p>
+    <p class="hero-desc" id="hero-desc"></p>
+    <div class="hero-botoes">
+      <button class="btn branco" id="hero-assistir">▶ Assistir</button>
+      <button class="btn cinza" id="hero-lista">＋ Minha lista</button>
+    </div>
+  </div>
+</section>
+
+<main id="linhas"></main>
+<p class="rodape" id="rodape"></p>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+  <div class="modal-caixa">
+    <button class="modal-fechar" id="fechar" aria-label="Fechar">✕</button>
+    <div class="tela" id="tela"></div>
+    <div class="modal-info">
+      <h2 id="m-titulo"></h2>
+      <p class="hero-meta" id="m-meta"></p>
+      <p class="m-desc" id="m-desc"></p>
+      <div class="hero-botoes">
+        <button class="btn cinza" id="m-lista">＋ Minha lista</button>
+        <a class="btn cinza" id="m-origem" target="_blank" rel="noopener noreferrer">Site de origem</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
